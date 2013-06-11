@@ -1,0 +1,28 @@
+﻿.ui-icon-validation {
+    width: 16px;
+    height: 16px;
+}
+
+.ux-widget {
+    height: 20px;
+}
+
+
+
+.ui-icon-validation {
+    width: 20px;
+	height: 100%;
+}
+
+.ux-widget-error {
+    
+}
+
+
+.input-label, .input-textbox, .input-lookup, .input-dropdown, .input-date, .input-email, .input-file, .input-textarea {
+    
+}
+
+.ui-accordion .form {
+    font-size: 12px;
+}

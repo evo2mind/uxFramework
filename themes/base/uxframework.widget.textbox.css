@@ -1,0 +1,91 @@
+﻿/*
+** stylesheet for Widget uxTextbox v.1.0.0
+** updated 2013.05.21 
+** develop by evo2mind
+*/
+
+
+.ux-textbox {
+}
+
+.ux-textbox-wrapper-input {
+    float: none!important;
+    overflow: hidden;
+    position: relative;
+    display: block;
+    height: 100%;
+    padding: 0 2px 0 8px;
+}
+
+.ux-textbox-wrapper-input .ux-textbox-input {
+    margin: 1px 0 0 0;
+    padding: 0;
+    border: 0;
+    background: none;
+    height: 18px !important;
+    width: 100%;
+    font-size: 0.9em;
+}
+
+.ux-textbox-wrapper-input .ux-textbox-input:focus {
+    outline: none;
+}
+
+.ux-textbox-wrapper-info {
+    display: inline-block;
+    height: 20px;
+    width: 18px;
+    display: table-cell;
+    vertical-align: middle;
+    float: right;
+}
+
+.ux-textbox-wrapper-info .ui-icon {
+    margin: auto;
+}
+
+.ux-textbox-wrapper-error, .ux-textbox-wrapper-validated{
+    float: right;
+    height: 100%;
+    display: none;
+}
+
+.ux-textbox-wrapper-error .ui-icon, .ux-textbox-wrapper-validated .ui-icon {
+    height: 100%;
+}
+
+.ui-state-error .ux-textbox-wrapper-error, .ui-state-validated .ux-textbox-wrapper-validated{
+    display: inline-block;
+    border: none;
+}
+
+.ui-state-error .ux-textbox-wrapper-input{
+    padding: 0 0 0 8px;
+}
+
+.ui-state-error .ux-textbox-wrapper-info, .ui-state-validated .ux-textbox-wrapper-info{
+    display: none;
+}
+
+.ux-textbox-inline-label {
+    position:absolute;
+    left: 8px; 
+    top: 2px;
+    height: 100%; 
+    color: #aaaaaa;
+    font-style: italic;
+}
+
+.ux-textbox .ui-widget-header{
+    border: 0;
+    background: none;
+}
+
+.ux-textbox-wrapper-info .ui-icon {
+    margin: 2px auto;
+    /*background-image: url(../images/ui-icons_847e71_256x240.png);*/
+}
+
+.ux-textbox-wrapper-validated .ui-icon {
+    background-image: url(../images/ui-icons_009900_256x240.png);
+}

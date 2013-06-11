@@ -1,0 +1,81 @@
+﻿
+
+
+.ux-textarea {
+    height: 100px;
+    position: relative
+}
+
+.ux-textarea-wrapper-input {
+    float: none!important;
+    overflow: hidden;
+    position: relative;
+    display: block;
+    height: 100%;
+    padding: 0 4px 0 8px;
+}
+
+.ux-textarea-input {
+    margin: 1px 0 0 0;
+    padding: 0;
+    border: 0;
+    background: none;
+    width: 100%;
+    font-size: 0.9em;
+    height: 100px!important;
+    overflow: hidden;
+    outline: none;
+    resize: none;
+}
+
+.ux-textarea-wrapper-sidebar {
+    float: right;
+    height: 100%;
+    width: 19px;
+    border-right: none;
+    border-top: none;
+    border-bottom: none;
+}
+
+.ux-textarea-wrapper-info, .ux-textarea-wrapper-error, .ux-textarea-wrapper-validated {
+    width: 18px; 
+    height: 18px;
+    display: none;
+}
+
+.ux-textarea-wrapper-info .ui-icon {
+    margin: 2px auto;
+}
+
+.ux-textarea-wrapper-vertical-scrollbar {
+    height: 60px;
+    width: 18px;
+    padding: 13px 0 6px 0;
+}
+
+.ux-textarea-vertical-scrollbar {
+    position: relative; 
+    width: 100%; 
+    height: 100%; 
+    border: 0;
+    background: none;
+}
+
+.ux-widget-show-info .ux-textarea-wrapper-info {
+    display: block;
+}
+
+.ux-widget-show-info .ux-textarea-wrapper-vertical-scrollbar {
+    height: 61px;
+}
+
+.ux-textarea-wrapper-vertical-scrollbar .ui-slider-handle {
+    left: 0px;
+    width: 17px;
+    height: 18px;
+    outline: none;
+}
+
+.ux-textarea-wrapper-vertical-scrollbar .ui-slider-handle .ui-icon {
+    margin-left: 1px; 
+}

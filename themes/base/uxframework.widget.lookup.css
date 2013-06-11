@@ -1,0 +1,35 @@
+﻿/*
+** stylesheet for Widget uxLookup v.1.0.0
+** updated 2013.05.22 
+** develop by evo2mind
+*/
+
+
+.ux-lookup-select{
+    float: right;
+    height: 100%;
+    border: none!important;
+    width: 18px;
+}
+
+.ux-lookup-select .ui-icon
+{
+}
+
+.ux-lookup-select a 
+{
+    border: none!important;
+    height: 100%;
+    width: 18px;
+    border-radius: 0;
+    border-top-left-radius: 0!important;
+    border-bottom-left-radius: 0!important;
+}
+
+.ux-lookup-select .ui-icon-search {
+    /*background-image: url(../images/ui-icons_eeeeea_256x240.png);*/
+}
+
+.ux-lookup-input {
+    display: none;
+}
