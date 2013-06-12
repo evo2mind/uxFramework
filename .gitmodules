@@ -10,3 +10,7 @@
 	path = external/qunit
 	url = https://github.com/jquery/qunit.git
 	ignore = dirty
+[submodule "external/jshint"]
+	path = external/jshint
+	url = https://github.com/jshint/jshint.git
+	ignore = dirty
