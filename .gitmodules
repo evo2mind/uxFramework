@@ -1,9 +1,12 @@
 [submodule "external/jquery-ui"]
 	path = external/jquery-ui
 	url = https://github.com/jquery/jquery-ui.git
+	ignore = dirty
 [submodule "external/jquery"]
 	path = external/jquery
 	url = https://github.com/jquery/jquery.git
+	ignore = dirty
 [submodule "external/qunit"]
 	path = external/qunit
 	url = https://github.com/jquery/qunit.git
+	ignore = dirty
