@@ -1,0 +1,24 @@
+{
+    "devel": true,
+    "es3": true,
+    "boss": true,
+    "curly": true,
+    "eqeqeq": true,
+    "eqnull": true,
+    "expr": true,
+    "immed": true,
+    "noarg": true,
+    "onevar": true,
+    "quotmark": "single",
+    "smarttabs": true,
+    "trailing": true,
+    "undef": true,
+    "unused": true,
+
+    "browser": true,
+    "jquery": true,
+
+    "globals": {
+        "Globalize": false
+    }
+}
