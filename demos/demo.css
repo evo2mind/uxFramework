@@ -1,0 +1,16 @@
+body{
+    font-size: 0.825em;
+}
+
+.form-label{
+    clear: left;
+    float: left;
+    width: 100px;
+    height: 22px;
+    line-height: 22px;
+}
+
+.form-control{
+    float: left;
+    width: 240px;
+}
