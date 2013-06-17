@@ -17,3 +17,4 @@
 [submodule "external/SyntaxHighlighter"]
 	path = external/SyntaxHighlighter
 	url = https://github.com/alexgorbatchev/SyntaxHighlighter.git
+	ignore = dirty
