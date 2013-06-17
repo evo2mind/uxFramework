@@ -14,3 +14,6 @@
 	path = external/jshint
 	url = https://github.com/jshint/jshint.git
 	ignore = dirty
+[submodule "external/SyntaxHighlighter"]
+	path = external/SyntaxHighlighter
+	url = https://github.com/alexgorbatchev/SyntaxHighlighter.git
