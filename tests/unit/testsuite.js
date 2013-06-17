@@ -1,7 +1,7 @@
 /* global jQuery, JSHINT */
 /* global QUnit, asyncTest, expect, ok, start, test, deepEqual, strictEqual, module */
 
-(function($, QUnit){
+(function($){
 
     "use strict";
     var reset,
@@ -147,7 +147,12 @@
     window.TestHelpers.commonWidgetTests = function(widget, settings) {
         module(widget + ": common widget");
 
-        window.TestHelpers.testJshint(widget);
+        if(!navigator.userAgent.match(/MSIE 8.0/i) &&
+           !navigator.userAgent.match(/MSIE 7.0/i) &&
+           !navigator.userAgent.match(/MSIE 6.0/i)){
+            window.TestHelpers.testJshint(widget);
+        }
+
         testWidgetDefaults(widget, settings.defaults);
         testWidgetOverrides(widget);
         testBasicUsage(widget);
@@ -254,4 +259,4 @@
         }
     };
 
-})(jQuery, QUnit);
+})(jQuery);
