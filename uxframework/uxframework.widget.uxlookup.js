@@ -21,6 +21,7 @@
         widgetCssPrefix: 'ux-lookup',
         widgetStateValue: 'default',
 		options: {
+            value: '',
             inlineLabel: '',
             errorMessage: '',
             inputMessage: '',

@@ -18,6 +18,7 @@
         widgetCssPrefix: 'ux-textbox',
         widgetStateValue: 'default',
 		options: {
+            value: '',
             inlineLabel: '',
             errorMessage: '',
             inputMessage: '',
@@ -36,6 +37,10 @@
 		},
 
 		_initOptions: function() {
+            if(this.options.value !== ''){
+                this.value(this.options.value);
+            }
+
 			this.setInlineLabel(this.options.inlineLabel);
 			this.setErrorMessage(this.options.errorMessage);
 			this.setValidatedMessage(this.options.validatedMessage);
@@ -244,6 +249,9 @@
 
 		_setOption: function(key, value) {
 			switch(key) {
+                case 'value':
+                    this.value(value);
+                    break;
                 case 'inlineLabel':
                     this.setInlineLabel(value);
                     break;
@@ -272,7 +280,7 @@
                 }
                 return this;
             }
-        } ,
+        },
 
         validation: function() {
             if (this.options.isRequired && this.element.val() === '') {
@@ -295,7 +303,7 @@
         _destroy: function() {
             var elemClasses = this.uxTextbox.attr('class');
             elemClasses.removeClass('ux-widget')
-                .removeClass('this.widgetCssPrefix')
+                .removeClass(this.widgetCssPrefix)
                 .removeClass('ui-helper-reset')
                 .removeClass('ui-state-default')
                 .removeClass('ui-widget-content');
