@@ -15,6 +15,7 @@
 		version: '1.1.0',
 		defaultElement: '<input>',
 		widgetEventPrefix: 'uxTextbox',
+        widgetCssPrefix: 'ux-textbox',
         widgetStateValue: 'default',
 		options: {
             inlineLabel: '',
@@ -40,7 +41,7 @@
 			this.setValidatedMessage(this.options.validatedMessage);
 			this.setMaxChars(this.options.maxChars);
 
-            if(this.options.inputMessage !== 'undefined' && this.options.inputMessage !== ''){
+            if(this.options.inputMessage !== ''){
                 this.showInputMessage(this.options.inputMessage);
             }else{
                 this.hideInputMessage();
@@ -94,7 +95,7 @@
         _uxWidgetWrapperHtml: function(){
             var elemWidget = $('<div></div>');
             elemWidget.addClass('ux-widget')
-                .addClass('ux-textbox')
+                .addClass(this.widgetCssPrefix)
                 .addClass('ui-helper-reset')
                 .addClass('ui-state-default')
                 .addClass('ui-widget-content');
@@ -147,6 +148,9 @@
                     $(elemInlineLabel)
                         .parent().children('input')
                         .focus();
+                })
+                .mousedown(function(evt){
+                    evt.preventDefault();
                 });
             return elemInlineLabel;
         },
@@ -289,11 +293,16 @@
         },
 
         _destroy: function() {
+            var elemClasses = this.uxTextbox.attr('class');
+            elemClasses.removeClass('ux-widget')
+                .removeClass('this.widgetCssPrefix')
+                .removeClass('ui-helper-reset')
+                .removeClass('ui-state-default')
+                .removeClass('ui-widget-content');
 			this.element
-				.removeClass('ui-helper-reset')
-                .removeClass('ux-widget-input')
                 .removeAttr('title')
-                .removeAttr('maxlength');
+                .removeAttr('maxlength')
+                .attr('class', elemClasses);
             this.uxTextbox.replaceWith(this.element);
 		},
 
