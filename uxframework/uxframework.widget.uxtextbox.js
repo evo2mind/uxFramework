@@ -45,6 +45,11 @@
             }else{
                 this.hideInputMessage();
             }
+
+            if(this.element.val() !== ''){
+                this.hideInlineLabel();
+                this.validation();
+            }
 		},
 		_events: {
 			focus: function() {
