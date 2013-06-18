@@ -1,4 +1,4 @@
-/*global test, expect, ok */
+/*global test, expect, ok, equal */
 
 (function($){
     "use strict";
@@ -32,6 +32,19 @@
         ok(uxTextbox.hasClass('ui-state-default'), 'widget default state defined');
         ok(!uxTextbox.hasClass('ui-state-error'), 'widget is not at error state');
         ok(!uxTextbox.hasClass('ui-state-highlight'), 'widget is not at validated state');
+
+    });
+
+    test('defined initial value', function(){
+        expect(2);
+
+        $('#uxTextbox').val('defined value');
+
+        var uxTextbox = $('#uxTextbox').uxTextbox(),
+            wrapper = uxTextbox.uxTextbox('widget');
+
+        equal(false, wrapper.find('.ux-widget-inline-label').is(':visible'), 'inline label not visible when initial value defined');
+        equal('validated', uxTextbox.uxTextbox('widgetState'), 'widget has validate state');
 
     });
 
