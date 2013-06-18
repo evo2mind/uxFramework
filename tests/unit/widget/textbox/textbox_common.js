@@ -3,6 +3,7 @@ TestHelpers.commonWidgetTests( "uxTextbox", {
     defaults: {
         disabled: false,
         create: null,
+        value: '',
         inlineLabel: '',
         errorMessage: '',
         inputMessage: '',
