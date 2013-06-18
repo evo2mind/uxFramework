@@ -1,6 +1,6 @@
 ﻿/*
-** stylesheet for Widget uxLabel v.1.0.0
-** updated 2013.05.21 
+** stylesheet for Widget uxLabel v.1.1.0
+** updated 2013.06.18
 ** develop by evo2mind
 */
 
@@ -8,7 +8,7 @@
 .ux-label {
 }
 
-.ux-label-wrapper-input {
+.ux-label .ux-widget-wrapper-label {
     float: none!important;
     overflow: hidden;
     position: relative;
@@ -17,7 +17,7 @@
     padding: 0 2px 0 8px;
 }
 
-.ux-label-wrapper-input .ux-label-input {
+.ux-label .ux-widget-label {
     margin: 0;
     padding: 0;
     border: 0;
@@ -26,7 +26,7 @@
     width: 100%;
 }
 
-.ux-label-wrapper-info {
+.ux-label .ux-widget-wrapper-info {
     display: inline-block;
     height: 20px;
     width: 20px;
@@ -35,7 +35,7 @@
     float: right;
 }
 
-.ux-label-wrapper-info .ui-icon {
+.ux-label .ux-widget-wrapper-info .ui-icon {
     margin: auto;
     margin: 2px auto;
 }
