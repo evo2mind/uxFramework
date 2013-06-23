@@ -130,7 +130,10 @@
         _uxWidgetInfoHtml: function(){
             var elemInfo = $('<span></span>');
             elemInfo.addClass('ui-icon')
-                .addClass('ui-icon-info');
+                .addClass('ui-icon-info')
+                .mousedown(function(evt){
+                    evt.preventDefault();
+                });
             return elemInfo;
         },
         _uxWidgetErrorHtml: function(){
