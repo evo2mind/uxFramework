@@ -52,7 +52,7 @@
                 this.hideInputMessage();
             }
 
-            if(this.element.val() !== ''){
+            if(this.value() !== ''){
                 this.hideInlineLabel();
                 this.validation();
             }
@@ -66,7 +66,7 @@
                 this.hideError();
             },
             keyup: function(){
-                if(this.element.val().length === 0){
+                if(this.value() === ''){
                     this.showInlineLabel();
                 }
             },
@@ -74,7 +74,7 @@
                 this.hideInlineLabel();
             },
             blur: function() {
-                if(this.element.val() === ''){
+                if(this.value() === ''){
                     this.showInlineLabel();
                 }
                 this.validation();
@@ -246,7 +246,8 @@
         },
 
 		setMaxChars: function(maxChars) {
-			this.element
+			this.uxTextbox
+                .find('.ux-widget-input')
 				.attr('maxlength', maxChars);
 		},
 
@@ -286,7 +287,7 @@
         },
 
         validation: function() {
-            if (this.options.isRequired && this.element.val() === '') {
+            if (this.options.isRequired && this.value() === '') {
                 this.showError('Required field cannot be left blank');
                 return false;
             } else {
