@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>uxFramework uxDateTextbox Widget - Default functionality</title>
+    <link rel="stylesheet" href="../../../external/jquery-ui/dist/jquery-ui.css"/>
+    <link rel="stylesheet" href="../../../themes/base/uxframework.base.css"/>
+    <link rel="stylesheet" href="../../../themes/base/uxframework.widget.uxtextbox.css"/>
+    <link rel="stylesheet" href="../../../themes/base/uxframework.widget.uxdatetextbox.css"/>
+    <link rel="stylesheet" href="../../../external/SyntaxHighlighter/build/output/styles/shCore.css"/>
+    <link rel="stylesheet" href="../../../external/SyntaxHighlighter/build/output/styles/shThemeDefault.css"/>
+    <link rel="stylesheet" href="../../demo.css"/>
+
+    <script type="text/javascript" src="../../../external/jquery/dist/jquery.js"></script>
+    <script type="text/javascript" src="../../../external/jquery-ui/dist/jquery-ui.js"></script>
+    <script type="text/javascript" src="../../../external/xregexp/src/xregexp.js"></script>
+    <script type="text/javascript" src="../../../external/SyntaxHighlighter/src/js/shCore.js"></script>
+    <script type="text/javascript" src="../../../external/SyntaxHighlighter/src/js/shBrushJScript.js"></script>
+    <script type="text/javascript" src="../../../external/SyntaxHighlighter/src/js/shBrushXml.js"></script>
+
+    <script type="text/javascript" src="../../../uxframework/uxframework.core.js"></script>
+    <script type="text/javascript" src="../../../uxframework/uxframework.utils.js"></script>
+    <script type="text/javascript" src="../../../uxframework/uxframework.widget.uxtextbox.js"></script>
+    <script type="text/javascript" src="../../../uxframework/uxframework.widget.uxdatetextbox.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $('#uxDateTextbox').uxDateTextbox({
+                isRequired: true,
+                inlineLabel: 'Estimate Date',
+                errorMessage: 'this input cannot be empty',
+                inputMessage: 'additional information about the date textbox input'
+            });
+            SyntaxHighlighter.defaults.toolbar = false;
+            SyntaxHighlighter.all();
+        });
+    </script>
+</head>
+<body>
+    <h2>uxFramework uxDateTextbox Widget Demo</h2>
+    <h3>uxDateTextbox Widget</h3>
+    <label for="uxDateTextbox" class="form-label">Input Date<span style="color:red">*</span></label>
+    <input type="text" id="uxDateTextbox" class="form-control"/>
+    <br/>
+    <br/>
+    <h3>Javascript source code</h3>
+    <script type="syntaxhighlighter" class="brush: js">
+        <![CDATA[
+        $(document).ready(function(){
+            $('#uxDateTextbox').uxDateTextbox({
+                isRequired: true,
+                inlineLabel: 'Estimate Date',
+                errorMessage: 'this input cannot be empty',
+                inputMessage: 'additional information about the date textbox input'
+            });
+        });
+        ]]>
+    </script>
+    <h3>Html source code</h3>
+    <pre class="brush: html">
+        ...
+        &lt;head&gt;
+
+            &lt;link rel="stylesheet" href="../../../external/jquery-ui/dist/jquery-ui.css"/&gt;
+            &lt;link rel="stylesheet" href="../../../themes/base/uxframework.base.css"/&gt;
+            &lt;link rel="stylesheet" href="../../../themes/base/uxframework.widget.uxtextbox.css"/&gt;
+            &lt;link rel="stylesheet" href="../../../themes/base/uxframework.widget.uxdatetextbox.css"/&gt;
+
+            &lt;script type="text/javascript" src="../../../external/jquery/dist/jquery.js"&gt;&lt;/script&gt;
+            &lt;script type="text/javascript" src="../../../external/jquery-ui/dist/jquery-ui.js"&gt;&lt;/script&gt;
+            &lt;script type="text/javascript" src="../../../external/xregexp/src/xregexp.js"&gt;&lt;/script&gt;
+            &lt;script type="text/javascript" src="../../../uxframework/uxframework.core.js"&gt;&lt;/script&gt;
+            &lt;script type="text/javascript" src="../../../uxframework/uxframework.utils.js"&gt;&lt;/script&gt;
+            &lt;script type="text/javascript" src="../../../uxframework/uxframework.widget.uxtextbox.js"&gt;&lt;/script&gt;
+            &lt;script type="text/javascript" src="../../../uxframework/uxframework.widget.uxdatetextbox.js"&gt;&lt;/script&gt;
+
+        &lt;/head&gt;
+        &lt;body&gt;
+
+            &lt;label for="uxDateTextbox" class="form-label"&gt;Input Date&lt;span style="color:red"&gt;*&lt;/span&gt&lt;/label&gt;
+            &lt;input type="text" id="uxDateTextbox" class="form-control"/&gt;
+
+        &lt;/body&gt;
+        ...
+    </pre>
+</body>
+</html>
