@@ -171,7 +171,7 @@
         },
 
         value: function(val){
-           if(val === undefined){
+            if(val === undefined){
                 return this.element.val();
             }else{
                this.element.val(val.toString());
