@@ -190,7 +190,7 @@
         },
 
 		widget: function() {
-            return this.uxTextbox;
+            return this.uxLookup;
         }
 	});
 
