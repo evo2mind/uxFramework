@@ -1,0 +1,33 @@
+﻿/*
+** stylesheet for Widget uxDropdown v.1.1.0
+** updated 2013.06.23
+** develop by evo2mind
+**
+**  Depends:
+**      uxframework.widget.uxtextbox.css
+*/
+
+
+.ux-dropdown .ux-widget-dropdown-button{
+    float: right;
+    height: 100%;
+    border: none!important;
+    width: 18px;
+}
+
+.ux-dropdown .ux-widget-dropdown-button a
+{
+    border: none!important;
+    height: 100%;
+    width: 18px;
+    border-radius: 0;
+    border-top-left-radius: 0!important;
+    border-bottom-left-radius: 0!important;
+}
+
+.ux-dropdown .ux-widget-hidden-input {
+    display: none;
+}
+
+.ux-widget-dropdown-menu{
+}
