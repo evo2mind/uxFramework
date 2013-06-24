@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>uxFramework uxDropdown Widget - Default functionality</title>
+    <link rel="stylesheet" href="../../../external/jquery-ui/dist/jquery-ui.css"/>
+    <link rel="stylesheet" href="../../../themes/base/uxframework.base.css"/>
+    <link rel="stylesheet" href="../../../themes/base/uxframework.widget.uxtextbox.css"/>
+    <link rel="stylesheet" href="../../../themes/base/uxframework.widget.uxdropdown.css"/>
+    <link rel="stylesheet" href="../../../external/SyntaxHighlighter/build/output/styles/shCore.css"/>
+    <link rel="stylesheet" href="../../../external/SyntaxHighlighter/build/output/styles/shThemeDefault.css"/>
+    <link rel="stylesheet" href="../../demo.css"/>
+    <script type="text/javascript" src="../../../external/jquery/dist/jquery.js"></script>
+    <script type="text/javascript" src="../../../external/jquery-ui/dist/jquery-ui.js"></script>
+    <script type="text/javascript" src="../../../external/SyntaxHighlighter/build/output/scripts/shCore.js"></script>
+    <script type="text/javascript" src="../../../external/SyntaxHighlighter/build/output/scripts/shBrushJScript.js"></script>
+    <script type="text/javascript" src="../../../external/SyntaxHighlighter/build/output/scripts/shBrushXml.js"></script>
+    <script type="text/javascript" src="../../../uxframework/uxframework.core.js"></script>
+    <script type="text/javascript" src="../../../uxframework/uxframework.widget.uxtextbox.js"></script>
+    <script type="text/javascript" src="../../../uxframework/uxframework.widget.uxdropdown.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $('#uxDropdown').uxDropdown({
+                isRequired: true,
+                inlineLabel: 'Please click the search icon',
+                errorMessage: 'this input cannot be empty',
+                inputMessage: 'additional information about the lookup input'
+            });
+            SyntaxHighlighter.defaults.toolbar = false;
+            SyntaxHighlighter.all();
+        });
+    </script>
+    <style type="text/css">
+        .ux-widget-dropdown-menu{
+            width: 215px;
+            font-size: 0.9em;
+        }
+    </style>
+</head>
+<body>
+    <h2>uxFramework uxDropdown Widget Demo</h2>
+    <h3>uxDropdown Widget</h3>
+    <label for="uxDropdown" class="form-label">Dropdown field<span style="color:red">*</span></label>
+    <select name="uxDropdown" id="uxDropdown" class="form-control">
+        <option value="1">Option 1</option>
+        <option value="2">Option 2</option>
+        <option value="3">Option 3</option>
+        <option value="4">Option 4</option>
+        <option value="5">Option 5</option>
+        <option value="6">Option 6</option>
+        <option value="7">Option 7</option>
+        <option value="8">Option 8</option>
+        <option value="9">Option 9</option>
+        <option value="10">Option 10</option>
+    </select>
+    <br/>
+    <br/>
+    <h3>Javascript source code</h3>
+    <script type="syntaxhighlighter" class="brush: js">
+        <![CDATA[
+        $(document).ready(function(){
+            $('#uxDropdown').uxDropdown({
+                isRequired: true,
+                errorMessage: 'this input cannot be empty',
+                inputMessage: 'additional information about the dropdown input'
+            });
+        });
+        ]]>
+    </script>
+    <h3>Html source code</h3>
+    <pre class="brush: html">
+        ...
+        &lt;head&gt;
+
+            &lt;link rel="stylesheet" href="../../../external/jquery-ui/dist/jquery-ui.css"/&gt;
+            &lt;link rel="stylesheet" href="../../../themes/base/uxframework.base.css"/&gt;
+            &lt;link rel="stylesheet" href="../../../themes/base/uxframework.widget.uxtextbox.css"/&gt;
+            &lt;link rel="stylesheet" href="../../../themes/base/uxframework.widget.uxdropdown.css"/&gt;
+
+            &lt;script type="text/javascript" src="../../../external/jquery/dist/jquery.js"&gt;&lt;/script&gt;
+            &lt;script type="text/javascript" src="../../../external/jquery-ui/dist/jquery-ui.js"&gt;&lt;/script&gt;
+            &lt;script type="text/javascript" src="../../../uxframework/uxframework.core.js"&gt;&lt;/script&gt;
+            &lt;script type="text/javascript" src="../../../uxframework/uxframework.widget.uxtextbox.js"&gt;&lt;/script&gt;
+            &lt;script type="text/javascript" src="../../../uxframework/uxframework.widget.uxdropdown.js"&gt;&lt;/script&gt;
+        &lt;/head&gt;
+        &lt;body&gt;
+
+            &lt;label for="uxDropdown" class="form-label"&gt;Dropdown field&lt;span style="color:red"&gt;*&lt;/span&gt;&lt;/label&gt;
+            &lt;select name="uxDropdown" id="uxDropdown" class="form-control"&gt;
+                &lt;option value="1"&gt;Option 1&lt;/option&gt;
+                &lt;option value="2"&gt;Option 2&lt;/option&gt;
+                &lt;option value="3"&gt;Option 3&lt;/option&gt;
+                &lt;option value="4"&gt;Option 4&lt;/option&gt;
+                &lt;option value="5"&gt;Option 5&lt;/option&gt;
+                &lt;option value="6"&gt;Option 6&lt;/option&gt;
+                &lt;option value="7"&gt;Option 7&lt;/option&gt;
+                &lt;option value="8"&gt;Option 8&lt;/option&gt;
+                &lt;option value="9"&gt;Option 9&lt;/option&gt;
+                &lt;option value="10"&gt;Option 10&lt;/option&gt;
+            &lt;/select&gt;
+
+        &lt;/body&gt;
+        ...
+    </pre>
+</body>
+</html>
