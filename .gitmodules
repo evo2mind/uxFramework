@@ -18,3 +18,6 @@
 	path = external/SyntaxHighlighter
 	url = https://github.com/alexgorbatchev/SyntaxHighlighter.git
 	ignore = dirty
+[submodule "external/xregexp"]
+	path = external/xregexp
+	url = https://github.com/slevithan/xregexp.git
