@@ -1,4 +1,30 @@
-﻿
-.ux-lookup-select .ui-icon-calendar {
-    /*background-image: url(../images/ui-icons_eeeeee_256x240.png);*/
+﻿/*
+** stylesheet for Widget uxLookup v.1.1.0
+** updated 2013.06.24
+** develop by evo2mind
+**
+**  Depends:
+**      uxframework.widget.uxtextbox.css
+*/
+
+
+.ux-datetextbox .ux-widget-button-select{
+    float: right;
+    height: 100%;
+    border: none!important;
+    width: 18px;
+}
+
+.ux-datetextbox .ux-widget-button-select a
+{
+    border: none!important;
+    height: 100%;
+    width: 18px;
+    border-radius: 0;
+    border-top-left-radius: 0!important;
+    border-bottom-left-radius: 0!important;
+}
+
+.ux-widget-datetextbox-calendar{
+    font-size: 0.9em;
 }
