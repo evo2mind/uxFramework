@@ -355,7 +355,7 @@
                 remainingChars = this.options.maxChars - inputCharsLength;
             this.uxTextarea
                 .find('.ux-widget-input-counter')
-                .html(remainingChars === 1 ? '1 char' : remainingChars + ' chars');
+                .html(remainingChars <= 1 ? remainingChars + ' Char' : remainingChars + ' Chars');
         },
 
         _refreshScrollBarPosition: function(){
