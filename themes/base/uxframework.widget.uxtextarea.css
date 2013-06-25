@@ -1,0 +1,131 @@
+﻿/*
+** stylesheet for Widget uxTextbox v.1.1.0
+** updated 2013.06.25
+** develop by evo2mind
+*/
+
+
+.ux-textarea {
+    height: 100px;
+    position: relative
+}
+
+.ux-textarea .ux-widget-wrapper-input {
+    float: none!important;
+    overflow: hidden;
+    position: relative;
+    display: block;
+    height: 100%;
+    padding: 0 4px 0 8px;
+}
+
+.ux-textarea .ux-widget-input {
+    margin: 1px 0 0 0;
+    padding: 0;
+    border: 0;
+    background: none;
+    width: 100%;
+    height: 100px!important;
+    overflow: hidden;
+    outline: none;
+    resize: none;
+}
+
+.ux-textarea .ux-widget-wrapper-sidebar {
+    float: right;
+    height: 100%;
+    width: 19px;
+    border-right: none;
+    border-top: none;
+    border-bottom: none;
+}
+
+.ux-textarea .ux-widget-wrapper-info,
+.ux-textarea .ux-widget-wrapper-error,
+.ux-textarea .ux-widget-wrapper-validated {
+    width: 18px; 
+    height: 18px;
+    text-align: center;
+}
+
+.ux-textarea .ux-widget-wrapper-info .ui-icon{
+    margin: 2px auto;
+}
+
+.ux-textarea .ux-widget-wrapper-error .ui-icon,
+.ux-textarea .ux-widget-wrapper-validated .ui-icon{
+    margin: 0 auto;
+}
+
+.ux-textarea .ux-widget-wrapper-vertical-scrollbar {
+    height: 60px;
+    width: 18px;
+    padding: 10px 0 9px 0;
+}
+
+.ux-textarea .ux-widget-vertical-scrollbar {
+    position: relative;
+    width: 100%; 
+    height: 100%; 
+    border: 0;
+    background: none;
+}
+
+.ux-textarea.ui-state-default .ux-widget-wrapper-info {
+    display: block;
+}
+
+.ux-textarea .ux-widget-wrapper-vertical-scrollbar {
+    position: absolute;
+    bottom: 0;
+    height: 61px;
+}
+
+.ux-textarea .ui-slider-handle {
+    left: 0;
+    width: 17px;
+    height: 18px;
+    outline: none;
+}
+
+.ux-textarea .ui-slider-handle .ui-icon {
+    margin-left: 1px; 
+}
+
+
+.ux-textarea .ux-widget-input-counter{
+    float: none !important;
+    overflow: hidden;
+    position: relative;
+    bottom: 16px;
+    display: block;
+    text-align: right;
+    font-size: 0.79em;
+    color: #aaaaaa;
+}
+
+.ux-textarea .ux-widget-wrapper-error,
+.ux-textarea .ux-widget-wrapper-validated{
+    display: none;
+}
+
+.ux-textarea .ux-widget-wrapper-error .ui-icon,
+.ux-textarea .ux-widget-wrapper-validated .ui-icon {
+    height: 100%;
+}
+
+.ux-textarea.ui-state-error .ux-widget-wrapper-error,
+.ux-textarea.ui-state-highlight .ux-widget-wrapper-validated{
+    display: inline-block;
+    border: none;
+    width: 18px;
+}
+
+.ux-textarea.ui-state-error .ux-widget-wrapper-info,
+.ux-textarea.ui-state-highlight .ux-widget-wrapper-info{
+    display: none;
+}
+
+.ux-textarea.ui-state-highlight .ux-widget-wrapper-validated{
+    display: block;
+}
