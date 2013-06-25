@@ -164,8 +164,16 @@
             return elemValidated;
 		},
         _uxWidgetInputCounter: function(){
-            var elemInputCounter = $('<div></div>');
+            var elemInputCounter = $('<div></div>'),
+                widget = this;
             elemInputCounter.addClass('ux-widget-input-counter')
+                .click(function(evt){
+                    evt.preventDefault();
+                    widget.element.focus();
+                })
+                .mousedown(function(evt){
+                    evt.preventDefault();
+                })
                 .html(this.options.maxChars === 1 ? ' 1 char' : this.options.maxChars + ' chars');
             return elemInputCounter;
         },
