@@ -69,14 +69,6 @@
                 dateFormat: widget.options.dateFormat,
                 minDate: widget.options.minDate,
                 maxDate: widget.options.maxDate,
-                beforeShow: function (input, inst) {
-                    setTimeout(function () {
-                        inst.dpDiv.css({
-                            top: elemPos.top - 25,
-                            left: elemPos.left - 1
-                        });
-                    }, 0);
-                },
                 onSelect: function() {
                     widget.showValidated();
                     widget.hideInlineLabel();
