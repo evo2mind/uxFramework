@@ -47,6 +47,7 @@
             this._initOptions();
             this._on(this.uxDropdown.find('.ux-widget-input'), this._events);
             this._attachButtonDropdownEvents();
+            this.showDefault();
 		},
 
         _drawDropdown: function(){
@@ -76,10 +77,14 @@
                 });
             this.uxDropdown
                 .find('.ux-widget-input')
-                .val(this.element[0].options[0].text)
                 .autocomplete('widget')
                 .css('width', this.uxDropdown.width())
                 .addClass('ux-widget-dropdown-menu');
+            if(this.element[0].options.length > 0){
+                this.uxDropdown
+                    .find('.ux-widget-input')
+                    .val(this.element[0].options[0].text);
+            }
             this.showDefault();
         },
 
