@@ -138,6 +138,7 @@
                     }else{
                         elemAutocomplete.autocomplete('close');
                     }
+                    elemAutocomplete.focus();
                 });
 		},
 
@@ -175,6 +176,12 @@
             evt.preventDefault();
         },
 
+        _hideDropdown: function(){
+            this.uxDropdown
+                .find('.ux-widget-input')
+                .autocomplete('close');
+        },
+
         value: function(val){
             if(val === undefined){
                 return this.element.val();
@@ -189,6 +196,7 @@
         },
 
         validation: function() {
+            this._hideDropdown();
             if (this.options.isRequired && this.uxDropdown.find('.ux-widget-input').val() === '') {
                 this.showError('Required field cannot be left blank');
                 return false;
