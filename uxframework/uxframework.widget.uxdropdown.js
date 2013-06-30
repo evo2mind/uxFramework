@@ -73,7 +73,8 @@
                     source: $.proxy(this, '_dataSource'),
                     change: $.proxy(this, '_validateAutocomplete'),
                     select: $.proxy(this, '_dropdownSelect'),
-                    focus: $.proxy(this, '_dropdownFocus')
+                    focus: $.proxy(this, '_dropdownFocus'),
+                    open: $.proxy(this, '_dropdownOpen')
                 });
             this.uxDropdown
                 .find('.ux-widget-input')
@@ -138,7 +139,7 @@
                     }else{
                         elemAutocomplete.autocomplete('close');
                     }
-                    elemAutocomplete.focus();
+	                elemAutocomplete.focus();
                 });
 		},
 
@@ -175,7 +176,11 @@
         _dropdownFocus: function(evt){
             evt.preventDefault();
         },
-
+		
+		_dropdownOpen: function() {
+			$('.ux-widget-dropdown-menu').css('width', this.uxDropdown.width() - 23);
+		},
+		
         _hideDropdown: function(){
             this.uxDropdown
                 .find('.ux-widget-input')
@@ -196,7 +201,6 @@
         },
 
         validation: function() {
-            this._hideDropdown();
             if (this.options.isRequired && this.uxDropdown.find('.ux-widget-input').val() === '') {
                 this.showError('Required field cannot be left blank');
                 return false;
