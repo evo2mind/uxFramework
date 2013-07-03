@@ -161,14 +161,16 @@
             });
             if (matchedOptions) {
                 this.hideInlineLabel();
-            }else{
-                this.value('');
-                this.uxDropdown
-                    .find('.ux-widget-input')
-                    .val('');
-                this.showError('cannot empty');
+            }else {
+	            this._selectLastSelectedOption();
             }
         },
+		
+		_selectLastSelectedOption: function() {
+		    if(this.element[0].options.length > 0) {
+			    this.value(this.element.val());
+		    }	
+		},
 
         _dropdownSelect: function(evt, ui){
             evt.preventDefault();
