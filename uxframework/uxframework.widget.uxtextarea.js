@@ -69,9 +69,19 @@
             },
             keyup: function(){
                 this._refreshInputCounter();
+	            this._refreshScrollPaneHeight();
                 this._refreshScrollBarPosition();
             },
-            paste: function(){
+            keypress: function(evt) {
+	            if (this.element.val().length >= this.options.maxChars) {
+	                evt.preventDefault();
+	            }
+            },
+            paste: function(evt) {
+	            if (this.element.val().length >= this.options.maxChars) {
+	                evt.preventDefault();
+		            this._validateCharsLimit();
+	            }
                 this._refreshInputCounter();
                 this._refreshScrollBarPosition();
             },
@@ -211,9 +221,19 @@
 
 		_refreshScrollPaneHeight: function(){
 			var elemWrapperScrollbar = this.uxTextarea
-				.find('.ux-widget-wrapper-vertical-scrollbar');
-            var scrollPaneHeight = this.uxTextarea.height() - elemWrapperScrollbar.css('padding-top').replace("px", "") - elemWrapperScrollbar.css('padding-bottom').replace("px", "") - elemWrapperScrollbar.position().top; // - (this.widgetState() === 'default' && this.options.inputMessage === '' ? 0 : 20);
+				.find('.ux-widget-wrapper-vertical-scrollbar'),
+				scrollPaneHeight = this.uxTextarea.height() - elemWrapperScrollbar.css('padding-top').replace("px", "") - elemWrapperScrollbar.css('padding-bottom').replace("px", "") - (this.widgetState() === 'default' && this.options.inputMessage === '' ? 0 : 20);
             elemWrapperScrollbar.css('height', scrollPaneHeight);
+			console.log('nilai: ' + this.element[0].scrollHeight + ', ' + this.uxTextarea.height());
+			if (this.element[0].scrollHeight <= this.uxTextarea.height()) {
+				this.uxTextarea
+					.find('.ui-slider-handle')
+					.hide();
+			} else {
+				this.uxTextarea
+					.find('.ui-slider-handle')
+					.show();
+			}
 		},
 
         showDefault: function(){
@@ -328,20 +348,20 @@
             if(val === undefined){
                 return this.element.val();
             }else{
-                this.element.val(val);
-                if(this.validation()){
+                if(this.validation()) {
                     this.element.val(val.substring(0, this.options.maxChars));
                 }
-                return this;
+	            return this;
             }
         },
 
         validation: function() {
+	        this._refreshScrollPaneHeight();
             if (this.options.isRequired && this.value() === '') {
                 this.showError('Required field cannot be left blank');
                 return false;
             } else {
-                this.showValidated();
+	            this.showValidated();
                 return true;
             }
         },
@@ -349,6 +369,13 @@
         isValidated: function() {
             return this.widgetStateValue === 'validated';
         },
+		
+		_validateCharsLimit: function() {
+		    if (this.element.val().length >= this.options.maxChars) {
+			    var currentVal = this.element.val().substring(0, this.options.maxChars);
+			    this.element.val(currentVal);
+		    }
+		},
 
         _refreshInputCounter: function(){
             var inputCharsLength = this.value().length,
