@@ -6,8 +6,7 @@
 
 
 .ux-textarea {
-    height: 100px;
-    position: relative
+    height: 100px!important;
 }
 
 .ux-textarea .ux-widget-wrapper-input {
@@ -38,6 +37,7 @@
     border-right: none;
     border-top: none;
     border-bottom: none;
+    position: relative;
 }
 
 .ux-textarea .ux-widget-wrapper-info,
@@ -60,7 +60,7 @@
 .ux-textarea .ux-widget-wrapper-vertical-scrollbar {
     height: 60px;
     width: 18px;
-    padding: 10px 0 9px 0;
+    padding: 13px 0 7px 0;
 }
 
 .ux-textarea .ux-widget-vertical-scrollbar {
