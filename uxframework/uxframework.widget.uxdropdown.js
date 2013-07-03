@@ -81,12 +81,17 @@
                 .autocomplete('widget')
                 .css('width', this.uxDropdown.width())
                 .addClass('ux-widget-dropdown-menu');
-            if(this.element[0].options.length > 0){
+	        
+	        if(this.element[0].options.length > 0){
                 this.uxDropdown
                     .find('.ux-widget-input')
                     .val(this.element[0].options[0].text);
             }
-            this.showDefault();
+	        
+	        if (this.element.val() !== undefined) {
+		        this.value(this.element.val());
+	        }
+
         },
 
         _uxWidgetInputElementHtml: function(){
@@ -191,9 +196,11 @@
             if(val === undefined){
                 return this.element.val();
             }else{
-               this.element.val(val.toString());
                 if(this.validation()){
                     this.element.val(val);
+	                this.uxDropdown
+		                .find('.ux-widget-input')
+		                .val(val);
                 }
                 this.element.change();
                 return this;
