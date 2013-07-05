@@ -6,7 +6,7 @@
 
 
 .ux-label {
-    background: none;
+    background: none!important;
 }
 
 .ux-label .ux-widget-wrapper-label {
